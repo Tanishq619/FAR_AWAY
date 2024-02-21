@@ -44,7 +44,7 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
         <option value="packed">Sort by packed</option>
       </select>
       <button
-        className="sm:ml-[40%] mt-2 md:mt-0 md:ml-4 py-2 px-4 bg-[#f4a226] font-bold mb-2 rounded-lg"
+        className="ml-[48%] mt-2 md:mt-0 md:ml-4 py-2 px-4 bg-[#f4a226] font-bold mb-2 rounded-lg"
         onClick={() => handleReset()}
       >
         Reset
