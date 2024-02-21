@@ -23,7 +23,7 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
 
   return (
     <div className="bg-[#5a3e2b]">
-      <ul className=" px-[8rem] py-[4rem] h-[26.5rem] flex gap-[5rem] flex-wrap overflow-auto">
+      <ul className=" px-[2rem] py-[2rem]  h-[26.5rem] md:flex md:flex-row md:items-start flex flex-col sm:items-center md:gap-[5rem] gap-[2rem] overflow-auto">
         {sortedArray.map((el) => (
           <ListItems
             items={el}
@@ -35,7 +35,7 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
       </ul>
 
       <select
-        className="bg-[#ffebb3] p-1 ml-[40%] rounded-xl"
+        className="bg-[#ffebb3] p-1 h-8 text-sm w-[8rem] md:ml-[40%] ml-[38%] rounded-xl"
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
       >
@@ -44,7 +44,7 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
         <option value="packed">Sort by packed</option>
       </select>
       <button
-        className="ml-[48%] mt-2 md:mt-0 md:ml-4 py-2 px-4 bg-[#f4a226] font-bold mb-2 rounded-lg"
+        className="ml-[48%] mt-2 md:mt-0 md:ml-4 md:py-2 md:px-4 sm:p-1  bg-[#f4a226] font-bold mb-2 rounded-lg"
         onClick={() => handleReset()}
       >
         Reset
