@@ -21,13 +21,16 @@ export default function Form({ Additems }) {
     setSelect(1);
   }
   return (
-    <div className="flex bg-[#e5771f] p-4 gap-4 justify-center">
-      <h1 className="text-3xl text-white">
+    <div className="flex flex-col items-center md:flex md:flex-row bg-[#e5771f] py-2 px-1 md:p-4 gap-4 md:justify-center">
+      <h1 className="w-[20rem] text-center md:w-auto text-2xl tracking-tighter md:text-3xl text-white">
         What do you need for your 😍 trip?
       </h1>
-      <form className="flex gap-4" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col justify-center md:flex md:flex-row items-center gap-4"
+        onSubmit={handleSubmit}
+      >
         <select
-          className="py-2 px-4  rounded-xl bg-[#ffebb3]"
+          className="h-8 md:h-auto md:py-2 md:px-4  rounded-xl bg-[#ffebb3]"
           value={select}
           onChange={(e) => setSelect(Number(e.target.value))}
         >

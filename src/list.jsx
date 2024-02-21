@@ -23,7 +23,7 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
 
   return (
     <div className="bg-[#5a3e2b]">
-      <ul className=" px-[8rem] py-[4rem] h-[26.5rem] flex gap-[5rem] flex-wrap">
+      <ul className=" px-[8rem] py-[4rem] h-[26.5rem] flex gap-[5rem] flex-wrap overflow-auto">
         {sortedArray.map((el) => (
           <ListItems
             items={el}
@@ -43,7 +43,12 @@ export default function Lists({ items, handleClose, onToggle, setItems }) {
         <option value="description">Sort by description</option>
         <option value="packed">Sort by packed</option>
       </select>
-      <button onClick={() => handleReset()}>Reset</button>
+      <button
+        className="ml-[55%] mt-2 md:mt-0 md:ml-4 py-2 px-4 bg-[#f4a226] font-bold mb-2 rounded-lg"
+        onClick={() => handleReset()}
+      >
+        Reset
+      </button>
     </div>
   );
 }
